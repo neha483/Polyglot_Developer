@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-07-23T00:00:00Z",
+  "repository": {
+    "source": "https://github.com/codejsha/spring-rest-sakila",
+    "name": "spring-rest-sakila",
+    "commit": null
+  },
+  "analysis_status": {
+    "type": "verified_bootstrap_snapshot",
+    "note": "This bundled snapshot contains repository facts verified from the public repository README and build configuration. Run main.py to produce the full file-, method-, and complexity-level output from a cloned checkout. A full run was not possible in the packaging environment because outbound Git cloning and an OPENAI_API_KEY were unavailable."
+  },
+  "overview": {
+    "purpose": "A Spring Boot sample REST API that exposes the MySQL Sakila DVD-rental database for learning and testing.",
+    "functionality": [
+      "CRUD access to actors, customers, films, payments, rentals, staff, and stores",
+      "Report endpoints for more complex queries",
+      "Generated REST Docs, OpenAPI/Swagger specification, and Postman collection",
+      "Health and Prometheus observability endpoints"
+    ],
+    "architecture": "Layered Spring Boot application using Spring Web, Spring Data JPA, HATEOAS, validation, security, Querydsl/Blaze-Persistence for query construction, MapStruct for mapping, MySQL persistence, and Actuator/Micrometer for observability.",
+    "data_flow": "HTTP request -> Spring web/controller layer -> application/service and query layer -> JPA/Querydsl persistence -> MySQL Sakila database -> mapped/HATEOAS response.",
+    "noteworthy_aspects": [
+      "Java 17 Gradle build",
+      "Documentation artifacts are generated from tests using Spring REST Docs",
+      "Build also generates OpenAPI and Postman artifacts",
+      "External MySQL 8 database is required"
+    ],
+    "risks_and_limitations": [
+      "This bootstrap JSON does not claim method-level coverage; execute the analyzer for exact methods and measured complexity.",
+      "Runtime behavior depends on external database configuration and seeded Sakila data."
+    ]
+  },
+  "verified_endpoints": [
+    "/api/v1/actors",
+    "/api/v1/customers",
+    "/api/v1/films",
+    "/api/v1/payments",
+    "/api/v1/rentals",
+    "/api/v1/reports",
+    "/api/v1/staffs",
+    "/api/v1/stores",
+    "/api/v1/actuator",
+    "/api/v1/actuator/prometheus"
+  ],
+  "methods": [],
+  "metrics": {
+    "status": "generated during full analyzer execution"
+  }
+}
